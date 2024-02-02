@@ -15,9 +15,8 @@ This project demonstrates the use of YOLOv8 for real-time sign language detectio
 
 ## Dataset
 
-- **Source:** Roboflow Universe (Link to dataset: [https://universe.roboflow.com/](https://universe.roboflow.com/)...)
-- **Format:** COCO (originally), converted to YOLOv8 compatible format using Roboflow
-- **Signs Included:** (List the specific signs included in the dataset)
+- **Source:** Roboflow Universe. Link to dataset: [sign_recognition Computer Vision Project ](https://universe.roboflow.com/ss-hwnzd/sign_recognition)
+- **Format:** YOLOv8 compatible format 
 
 ## Model Architecture
 
@@ -25,8 +24,7 @@ This project demonstrates the use of YOLOv8 for real-time sign language detectio
 
 ## Training Process
 
-1. **Dataset Download:** Obtained the dataset from Roboflow Universe in COCO format.
-2. **Dataset Conversion:** Used Roboflow to convert the dataset into a YOLOv8 compatible format.
+1. **Dataset Download:** Obtained the dataset from Roboflow Universe in YOLO-v8 format.
 3. **Model Training:** Trained the YOLOv8 model on the converted dataset.
 
 ## Dependencies
@@ -34,19 +32,19 @@ This project demonstrates the use of YOLOv8 for real-time sign language detectio
 - Python
 - PyTorch
 - YOLOv8
-- Roboflow (for dataset management)
+- Roboflow (for dataset management and dataset)
 
 ## Usage
 
 1. Clone this repository.
 1. Get dataset from roboflow universe.
-1. Make dataset yolov8 compatible using roboflow.
 3. Download the pre-trained model weights.
-4. Run the notebook named `instance_seg_yolo_v8.ipynb`
+4. Run the notebook named `instance_segmentation_sign_recognition.ipynb`
 
 ## Results
 
 - Results are stored in result_dir directory. Feel free to check the result. 
+- sample predictions are stored in prediction_samples directory 
 
 ## Future Work
 
