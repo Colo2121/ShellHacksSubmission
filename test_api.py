@@ -13,6 +13,8 @@ if not cap.isOpened():
     print("Error: No se puede abrir la cámara.")
     exit()
 
+# Target string to send
+target = input("Please provide a target letter: ")
 while True:
     # Captura frame a frame
     ret, frame = cap.read()
@@ -29,9 +31,6 @@ while True:
     # Encode the byte string to base64 for JSON
     encoded_frame = base64.b64encode(frame_bytes).decode('utf-8')
 
-    # Target string to send
-    target = "H"
-
     # Create JSON data
     data = {
         'frame': encoded_frame,
@@ -41,9 +40,9 @@ while True:
     # Send POST request to the API
     response = requests.post(url, json=data)
     json_response = response.json()
-    print(json_response)
+
     if json_response.get("target_detected"):
-        print("Detected!")
+        print("Detected letter: ", target)
     # Check response
     if response.status_code == 200:
         pass
